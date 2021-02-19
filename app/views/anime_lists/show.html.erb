@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @anime_list.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @anime_list.description %>
+</p>
+
+<div id="anime_items_wrapper">
+  <%= render @anime_list.anime_items %>
+  <div id="form">
+    <%= render "anime_items/form" %>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_anime_list_path(@anime_list) %> |
+<%= link_to 'Back', anime_lists_path %>
