@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_19_205234) do
+ActiveRecord::Schema.define(version: 2021_02_19_211454) do
 
   create_table "anime_items", force: :cascade do |t|
     t.string "content"
     t.integer "anime_list_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "completed_at"
     t.index ["anime_list_id"], name: "index_anime_items_on_anime_list_id"
   end
 
